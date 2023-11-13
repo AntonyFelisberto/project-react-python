@@ -8,3 +8,5 @@ pip install djangorestframework
 
 python manage.py migrate
 python manage.py createsuperuser --email admin@example.com --username admin
+
+npx create-react-app frontend
