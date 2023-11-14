@@ -5,7 +5,7 @@ from .Serializers import UserSerializer,GroupSerializer
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-    pagination_class = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
 class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
