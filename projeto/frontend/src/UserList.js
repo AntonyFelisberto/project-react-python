@@ -2,7 +2,7 @@ import React from 'react'
 import ListComponent from './ListComponent'
 
 export default class UserList extends React.Component{
-    state = {lists:null,loading:true}
+    state = {lists:[],loading:true}
 
     async componentDidMount(){
         const config = {
@@ -21,9 +21,10 @@ export default class UserList extends React.Component{
     }
 
     render(){
+        const listsApi = this.state.lists;
         return (
             <div>
-                <ListComponent listName={"minha lista"}/>
+                {listsApi.map(list => <ListComponent key={list.id} listName={list.name} items={list.item_set}/>)}
             </div>
         )
     }
