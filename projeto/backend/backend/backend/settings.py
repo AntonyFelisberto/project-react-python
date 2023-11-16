@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "corsheaders",
-    "core"
+    "core",
+    "rest_framework.authtoken"
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    "local": {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',
+        'USER': 'mydatabaseuser',
+        'PASSWORD':'14758',
+        'HOST':'127.0.0.1',
+        'PORT':'5432',
     }
 }
 
