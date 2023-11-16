@@ -6,6 +6,7 @@ activate
 django-admin startproject backend
 pip install djangorestframework
 pip install django-cors-headers
+pip install psycopg2
 
 python manage.py startapp core
 python manage.py createsuperuser --email admin@example.com --username admin
