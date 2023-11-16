@@ -2,5 +2,5 @@ import React from "react";
 
 export default function ItemComponent(props) {
     const status = props.status;
-    return <li>{props.name} Status: {status ? <div><p>Completo</p></div> : <div><p>Nao finalizado</p></div> }</li>
+    return <li>{props.name} <div>Status: {status ? <div>Completo</div> : <div>Nao finalizado</div>}</div></li>
 }
